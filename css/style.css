@@ -1,4 +1,5 @@
 @media (max-width: 540px) {
+
   .movie-list-container {
     justify-content: center;
   }
@@ -25,36 +26,41 @@
     gap: 0px;
   }
 
-  /* 1. Faz o layout de duas colunas virar uma só, empilhando os itens */
-    .movie-details-container {
-        flex-direction: column; /* Altera o eixo principal do Flexbox para vertical, colocando o pôster em cima das informações. */
-        align-items: center;    /* Centraliza os itens empilhados (o pôster e o bloco de informações) na horizontal. */
-        gap: 20px;              /* Agora, o 'gap' controla o espaçamento vertical entre o pôster e o bloco de informações. */
-        padding: 20px;          /* Reduz o espaçamento interno do card para otimizar o espaço em telas menores. */
-        margin: 30px 15px;      /* Reduz a margem vertical e garante uma margem lateral para não colar nas bordas da tela. */
-    }
+  .movie-details-container {
+    padding: 20px;          
+    margin: 30px 15px;      
+  }
     
-    /* 2. Garante que o pôster se ajuste à tela e não fique muito grande */
-    .movie-poster img {
-        width: 100%;      /* Faz a imagem ter a largura máxima de seu container, tornando-a fluida. */
-        max-width: 280px; /* Limita a largura da imagem para que ela não fique excessivamente grande. */
-    }
-    
-    /* 3. Ajusta os tamanhos das fontes para uma melhor leitura no mobile */
-    .rating {
-        font-size: 20px; /* Diminui o tamanho das estrelas. */
-    }
-    
-    .movie-details-info h1 {
-        font-size: 24px;      /* Reduz o tamanho do título do filme. */
-        text-align: center;   /* Centraliza o título, o que geralmente fica mais harmonioso no layout de coluna única. */
-    }
-    
-    .movie-details-info p {
-        font-size: 16px; /* Reduz o tamanho do texto dos parágrafos, melhorando a legibilidade no celular. */
-    }
-}
+  .movie-details-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
+  .back-link {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+    
+  .movie-poster img {
+    width: 100%;      
+    max-width: 280px; 
+  }
+    
+  .rating {
+    font-size: 20px; 
+  }
+    
+  .movie-details-info h1 {
+    font-size: 24px;      
+    text-align: center;   
+  }
+    
+  .movie-details-info p {
+    font-size: 16px; 
+  }
+
+}
 
 
 * {
@@ -191,97 +197,103 @@ footer {
   text-decoration: none; 
 }
 
-/* Container que centraliza toda a seção do formulário na página */
 .form-page-container {
-  max-width: 800px;     /* Define uma largura máxima para o conteúdo não ficar muito esticado em telas grandes */
-  margin: 60px auto;    /* Adiciona 60px de margem em cima/embaixo e centraliza horizontalmente com 'auto' */
+  max-width: 800px;     
+  margin: 60px auto;    
 }
 
-/* Título "New Review" da página */
 .form-page-container h2 {
-  text-align: center;   /* Centraliza o texto do título */
-  margin-bottom: 20px;  /* Cria um espaço abaixo do título, antes do card do formulário */
-  font-size: 36px;      /* Tamanho da fonte do título */
-  font-weight: 400;     /* Peso da fonte 'normal' */
+  text-align: center;   
+  margin-bottom: 20px;  
+  font-size: 36px;      
+  font-weight: 400;     
 }
 
-/* O 'card' branco que envolve o formulário */
 .form-container {
-  background-color: #f4f5f6; /* Cor de fundo do card */
-  padding: 33px 61px;          /* Espaçamento interno (vertical e horizontal) para o conteúdo do formulário 'respirar' */
-  border-radius: 12px;         /* Arredonda os cantos do card */
-  box-shadow: 0px 4px 4px 0px #00000040; /* Adiciona uma sombra sutil para dar profundidade */
+  background-color: #f4f5f6; 
+  padding: 33px 61px;          
+  border-radius: 12px;         
+  box-shadow: 0px 4px 4px 0px #00000040; 
 }
 
-/* Agrupador para cada par de label e input */
 .form-group {
-  margin-bottom: 34px;     /* Cria um espaçamento vertical entre cada campo do formulário */
-  display: flex;             /* Ativa o Flexbox... */
-  flex-direction: column;    /* ...para garantir que o label fique em cima do input (em coluna) */
+  margin-bottom: 34px;     
+  display: flex;             
+  flex-direction: column;    
 }
 
-/* Estilo para os rótulos (labels) dos campos */
 .form-group label {
-  font-size: 24px;      /* Tamanho da fonte do rótulo */
-  margin-bottom: 6px;   /* Pequeno espaço entre o rótulo e o campo de entrada abaixo */
+  font-size: 24px;     
+  margin-bottom: 6px;   
 }
 
-/* Estilo geral para todos os campos de entrada */
+
 .form-group input,
 .form-group select,
 .form-group textarea {
-  width: 100%;                  /* Faz com que os campos ocupem toda a largura disponível */
-  padding: 12px;                /* Espaçamento interno para o texto digitado não ficar colado nas bordas */
-  border: 1px solid #e8eaed;    /* Borda sutil para os campos */
-  border-radius: 12px;          /* Arredonda os cantos dos campos de entrada */
-  font-size: 14px;              /* Tamanho da fonte para o texto que o usuário digita */
-  color: #333;                  /* Cor do texto digitado */
-  font-family: inherit;         /* Garante que os campos usem a mesma fonte definida no 'body' */
+  width: 100%;                  
+  padding: 12px;                
+  border: 1px solid #e8eaed;    
+  border-radius: 12px;         
+  font-size: 14px;              
+  color: #333;                  
+  font-family: inherit;         
 }
 
-/* Container para colocar 'Stars' e 'Watched Date' lado a lado */
 .form-row {
-  display: flex; /* Ativa o Flexbox para alinhar os itens na horizontal */
-  gap: 20px;     /* Cria um espaço de 20px entre os dois campos */
+  display: flex; 
+  gap: 20px;     
 }
 
-/* Faz com que cada .form-group dentro de .form-row cresça e ocupe o espaço igualmente */
+
 .form-row .form-group {
-  flex: 1; /* flex: 1 é um atalho para flex-grow: 1, flex-shrink: 1, flex-basis: 0% */
+  flex: 1; 
 }
 
-/* Estilo do botão de submissão do formulário */
 .submit-button {
-  width: 100%;                  /* Faz o botão ocupar toda a largura */
-  padding: 12px;                /* Espaçamento interno */
-  background-color: #2b2d42;    /* Cor de fundo escura, igual ao header */
-  color: white;                 /* Cor do texto do botão */
-  border: none;                 /* Remove a borda padrão do navegador */
-  border-radius: 12px;          /* Arredonda os cantos do botão */
-  font-size: 20px;              /* Tamanho do texto do botão */
-  cursor: pointer;              /* Mostra a 'mãozinha' ao passar o mouse */
-  margin-top: 10px;             /* Espaço acima do botão */
+  width: 100%;                  
+  padding: 12px;                
+  background-color: #2b2d42;    
+  color: white;                 
+  border: none;                 
+  border-radius: 12px;          
+  font-size: 20px;              
+  cursor: pointer;              
+  margin-top: 10px;             
 }
 
-/* --- Movie Details Page Styles --- */
 
-/* 1. O container principal que se parece com um grande card branco */
+
 .movie-details-container {
-  /* Layout com Flexbox */
-  display: flex;
-  align-items: flex-start;
-  gap: 65px;
-
-  /* Tamanho e Centralização na página */
   max-width: 1200px;
   margin: 55px auto;
 
-  /* Estilo Visual do Card */
   background-color: #f4f5f6;
-  padding: 86px 90px;
+  padding: 48px 90px 86px;
   border-radius: 12px;
   box-shadow: 0px 4px 4px 0px #00000040;
 }
+
+.movie-details-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 65px;
+}
+
+.back-link {
+  margin-bottom: 20px;
+}
+
+.back-link a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
 
 /* 2. A coluna do pôster e sua imagem */
 .movie-poster {
@@ -293,7 +305,6 @@ footer {
   border-radius: 12px;
 }
 
-/* 3. Estilos gerais para os textos na coluna da direita */
 .movie-details-info h1 {
   font-size: 46px;
   margin-bottom: 30px;
@@ -304,7 +315,6 @@ footer {
   line-height: 1.5; 
 }
 
-/* 4. Estilos para os agrupamentos e detalhes finos */
 .movie-section {
   margin-bottom: 20px;
 }
