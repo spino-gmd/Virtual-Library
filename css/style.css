@@ -295,13 +295,13 @@ footer {
 }
 
 
-/* 2. A coluna do pôster e sua imagem */
 .movie-poster {
   flex-shrink: 0; 
 }
 
 .movie-poster img {
   width: 380px;
+  height: 600px;
   border-radius: 12px;
 }
 
