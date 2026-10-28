@@ -218,6 +218,12 @@ footer {
   font-weight: 400;     
 }
 
+.form-page-container span {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
 .form-container {
   background-color: #f4f5f6; 
   padding: 33px 61px;          
