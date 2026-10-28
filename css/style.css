@@ -221,7 +221,7 @@ footer {
 .form-page-container span {
   display: flex;
   justify-content: center;
-  padding-top: 5px;
+  padding: 5px 0 10px 0;
 }
 
 .form-container {
