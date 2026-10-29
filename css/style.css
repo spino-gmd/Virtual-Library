@@ -57,7 +57,7 @@ header a {
   align-items: center;
 
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.7s ease-in-out;
 }
 
 .add-button:hover {
@@ -90,8 +90,8 @@ footer {
   height: 425px;
   text-align: center;
   box-shadow: 0px 4px 3px 0px #00000040;
-  transition: box-shadow 0.3s ease-in-out;
-  animation: fadeInUp 0.8s ease-out forwards;
+  transition: box-shadow 0.5s ease-in-out;
+  animation: fadeInUp 1.0s ease-out forwards;
 }
 
 .book-card:hover {
@@ -166,6 +166,7 @@ footer {
   text-align: center;
   padding: 0 0 10px 0;
 }
+
 .review-note span {
   padding: 5px;
 }
@@ -222,7 +223,7 @@ footer {
   cursor: pointer;              
   margin-top: 10px;   
   
-  transition: background-color 0.3s ease;
+  transition: background-color 1.0s ease;
   box-shadow: 0.3s ease;
 }
 
