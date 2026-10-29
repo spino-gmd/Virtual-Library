@@ -317,11 +317,12 @@ footer {
 
 
 .book-cape {
+  height: 65vh;
   flex-shrink: 0; 
 }
 
 .book-cape img {
-  height: 500px;
+  height: 100%;
   border-radius: 12px;
 }
 
