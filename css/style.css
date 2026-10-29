@@ -35,8 +35,16 @@ header div {
   justify-content: space-round;
   align-items: center;
 }
+
 header span {
   font-size: 36px;
+
+  cursor: pointer;
+  transition: color 0.7s ease-in-out;
+
+}
+header span:hover {
+  color: #8d99ae;
 }
 
 header a {
@@ -158,7 +166,7 @@ footer {
   display: flex;
   justify-content: center;
   margin: 15px;
-  padding: 5px 0 10px 0;
+  padding: 5px 5px 10px 5px;
 }
 
 .review-note h3 {
@@ -363,4 +371,16 @@ footer {
     .book-list-container {
         justify-content: center;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
 }
