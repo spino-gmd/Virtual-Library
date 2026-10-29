@@ -26,33 +26,33 @@
         <div class="form-page-container">
 
     <h2>New Review</h2>
-    <span><strong>NOTE:</strong>&ensp;Your book won't be saved in this site, since it lacks a JavaScript database and is static. Also, some data in this website might be fictitious and won't rely on reality.</span>
+    <span><strong>NOTE:</strong>&ensp;Your book and it's cape won't be saved or loaded in this site, since it lacks a JavaScript database and is static. Also, some data in this website might be fictitious and won't rely on reality.</span>
     <div class="form-container">
         <form>
             <div class="form-group">
                 <label for="book-name">Book Name</label>
-                <input type="text" id="book-name" placeholder="Enter the book title">
+                <input type="text" name="Book Title" id="book-name" placeholder="Enter the book title">
             </div>
 
             <div class="form-group">
                 <label for="poster-url">Cape URL</label>
-                <input type="text" id="cape-url" placeholder="Paste image URL (jpg or png)">
+                <input type="url" name="Cape URL" id="cape-url" placeholder="Paste image URL (jpg or png)">
             </div>
 
             <div class="form-group">
                 <label for="author-name">Author Name</label>
-                <input type="text" id="author-name" placeholder="Enter the book author's name">
+                <input type="text" name="Author's Name" id="author-name" placeholder="Enter the book author's name">
             </div>
 
             <div class="form-group">
                 <label for="book-genre">Book Genre</label>
-                <input type="text" id="book-genre" placeholder="Enter the book genre">
+                <input type="text" name="Book Genre" id="book-genre" placeholder="Enter the book genre">
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label for="rating-select">Stars</label>
-                    <select id="rating-select">
+                    <select id="rating-select" name="Rating">
                         <option value="">Choose a rating</option>
                         <option value="1">★☆☆☆☆ - 1 Star</option>
                         <option value="2">★★☆☆☆ - 2 Stars</option>
@@ -65,13 +65,13 @@
 
                 <div class="form-group">
                     <label for="read-date">Read Date</label>
-                    <input type="date" id="read-date">
+                    <input type="date" name="Read Date" id="read-date">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="review-text">My Review</label>
-                <textarea id="review-text" rows="5" placeholder="Write your thoughts here..."></textarea>
+                <textarea id="review-text" name="Review Text" rows="5" placeholder="Write your thoughts here..."></textarea>
             </div>
 
             <button type="submit" class="submit-button">Add</button>
